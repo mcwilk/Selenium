@@ -14,7 +14,7 @@ driver.get(r"C:\Users\mwilk\PycharmProjects\Selenium\Files\FileUpload.html")
 driver.maximize_window()
 
 upload_input = driver.find_element(By.ID, "myFile")
-path = os.path.abspath(r"Files\uploadMe.txt")
+path = os.path.abspath(r"Files/uploadMe.txt")
 
 driver.save_screenshot("Screenshots/before.png")
 upload_input.send_keys(path)
