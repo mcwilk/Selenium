@@ -1,5 +1,7 @@
 # Directories
 .idea
+__pycache__
+report
 
 # Files
 
