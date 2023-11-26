@@ -1,5 +1,6 @@
 import logging
 
+import allure
 from selenium.webdriver.common.by import By
 
 from FirstAppTestingWithPOP.locators.locators import SearchResultLocators
@@ -11,9 +12,14 @@ class SearchResultsPage:
         self.driver = driver
         self.logger = logging.getLogger(__name__)
 
+    @allure.step("Checking results")
     def get_hotel_names(self):
         hotels = self.driver.find_elements(By.XPATH, SearchResultLocators.hotel_names_xpath)
         hotel_names = [hotel.get_attribute("textContent") for hotel in hotels]
+        allure.attach(
+            self.driver.get_screenshot_as_png(), name="get_hotel_names", attachment_type=allure.attachment_type.PNG
+        )
+
         self.logger.info("Available hotels are:")
 
         for name in hotel_names:

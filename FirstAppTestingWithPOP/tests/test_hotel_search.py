@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -20,6 +21,8 @@ class TestHotelSearch:
         yield
         self.driver.quit()
 
+    @allure.title("Test method: test_hotel_search")
+    @allure.description("Test checking if 'search' option works as expected")
     def test_hotel_search(self, setup):
         self.driver.get(r"http://www.kurs-selenium.pl/demo/")
 
