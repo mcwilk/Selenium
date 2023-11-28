@@ -1,18 +1,13 @@
 import allure
 import pytest
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+
+from FirstAppTestingWithPOP.utils.driver_factory import DriverFactory
 
 
 @pytest.fixture()
 def setup(request):
-    options = webdriver.ChromeOptions()
-    options.add_experimental_option("detach", True)
-
-    chrome_service = webdriver.ChromeService(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=chrome_service, options=options)
+    driver = DriverFactory.get_driver(browser="edge")
     driver.implicitly_wait(1)
-    driver.maximize_window()
     request.cls.driver = driver
     before_failed = request.session.testsfailed
     yield
