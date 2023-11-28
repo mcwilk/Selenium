@@ -6,7 +6,7 @@ from FirstAppTestingWithPOP.utils.driver_factory import DriverFactory
 
 @pytest.fixture()
 def setup(request):
-    driver = DriverFactory.get_driver(browser="edge")
+    driver = DriverFactory.get_driver(browser="chrome")
     driver.implicitly_wait(1)
     request.cls.driver = driver
     before_failed = request.session.testsfailed
