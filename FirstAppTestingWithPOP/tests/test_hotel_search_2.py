@@ -31,7 +31,7 @@ class TestHotelSearch2:
 
         assert hotel_prices[0] == "$22"
         assert hotel_prices[1] == "$50"
-        assert hotel_prices[2] == "$80"
+        assert hotel_prices[2] == "$8000"
         assert hotel_prices[3] == "$150"
 
         assert hotel_prices == ["$22", "$50", "$80", "$150"]
