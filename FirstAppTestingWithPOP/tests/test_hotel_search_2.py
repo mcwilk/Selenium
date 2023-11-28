@@ -1,13 +1,12 @@
 import allure
 import pytest
 
-from FirstAppTestingWithPOP.tests.base_test import BaseTest
 from FirstAppTestingWithPOP.pages.search_hotel import SearchHotelPage
 from FirstAppTestingWithPOP.pages.search_results import SearchResultsPage
 
 
 @pytest.mark.usefixtures("setup")
-class TestHotelSearch2(BaseTest):
+class TestHotelSearch2:
 
     @allure.title("Test method: test_hotel_search")
     @allure.description("Test checking if 'search' option works as expected")
