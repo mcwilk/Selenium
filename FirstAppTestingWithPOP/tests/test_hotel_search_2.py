@@ -7,7 +7,7 @@ from FirstAppTestingWithPOP.pages.search_results import SearchResultsPage
 
 
 @pytest.mark.usefixtures("setup")
-class TestHotelSearch(BaseTest):
+class TestHotelSearch2(BaseTest):
 
     @allure.title("Test method: test_hotel_search")
     @allure.description("Test checking if 'search' option works as expected")
