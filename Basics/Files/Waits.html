@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Strona testowa</title>
+<script>
+function myFunction() {
+document.getElementsByTagName("p")[0].removeAttribute("hidden");  
+}
+</script>
+</head>
+<body>
+
+<h1>Witaj na stronie testowej</h1>
+
+<button type="button" id="clickOnMe" onclick="setTimeout(myFunction, 3000)">Kliknij mnie!</button> <br>
+
+<p hidden>Dopiero się pojawiłem!</p>
+</body>
+</html>
