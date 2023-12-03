@@ -6,6 +6,7 @@ class MyAccountLocators:
     my_account_xpath = (By.XPATH, "//li[@id='menu-item-22']//a")
     username_id = (By.ID, "username")
     password_id = (By.ID, "password")
+    login_name = (By.NAME, "login")
     reg_email_id = (By.ID, "reg_email")
     reg_password_id = (By.ID, "reg_password")
     logout_link_text = (By.LINK_TEXT, "Logout")
