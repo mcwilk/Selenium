@@ -15,8 +15,6 @@ class MyAccountLocators:
 
 class BillingAddressLocators:
 
-    reg_email_id = (By.ID, "reg_email")
-    reg_password_id = (By.ID, "reg_password")
     addresses_link_text = (By.LINK_TEXT, "Addresses")
     edit_link_text = (By.LINK_TEXT, "Edit")
     first_name_id = (By.ID, "billing_first_name")
