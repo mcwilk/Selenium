@@ -17,7 +17,7 @@ class SearchHotelPage:
         self.logger.info(f"Setting city {city}")
         self.driver.find_element(By.XPATH, SearchHotelLocators.search_hotel_span_xpath).click()
         self.driver.find_element(By.XPATH, SearchHotelLocators.search_hotel_input_xpath).send_keys(city)
-        self.driver.find_element(By.XPATH, SearchHotelLocators.location_match_span_xpath).click()
+        self.driver.find_element(By.XPATH, SearchHotelLocators.location_match_span_xpath.replace('location', city)).click()
         allure.attach(self.driver.get_screenshot_as_png(), name="set_city", attachment_type=allure.attachment_type.PNG)
 
     @allure.step("Setting date range from '{1}' to '{2}'")
