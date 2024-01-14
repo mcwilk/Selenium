@@ -13,8 +13,8 @@ class ExcelReader:
 
         for i in range(1, sheet.nrows):
             search_data = SearchData(
-                sheet.cell(i, 0).value,
-                sheet.cell(i, 1).value
+                sheet.cell(i, 1).value,
+                sheet.cell(i, 2).value
             )
             data.append(search_data)
 
